@@ -1,10 +1,11 @@
 import datetime
-name = "Ramin"
+from datetime import date
+name1 = "Ramin"
 # FIRST PERSON
-your_born_date =datetime.datetime (2007,1,1)
-now = datetime.datetime(2020,3,8)
+your_born_date = datetime.datetime(2007,1,1)
+now = datetime.datetime.today()
 day_b = now-your_born_date
-print(str(name) + " your life in days = " + str(day_b.days))
+print(str(name1) + " your life in days = " + str(day_b.days))
 from dateutil.relativedelta import relativedelta
 difference_in_years_b = relativedelta(now, your_born_date).years
 print("your life in years = " + str(difference_in_years_b))
@@ -16,12 +17,12 @@ print("your life in week = " + str(difference_in_week_b))
 
 # SECOND PERSON
 print("----------------------------------------------")
-name = "Elmira"
+name2 = "Rashid"
 
-your_born_date =datetime.datetime (1960,5,16)
+your_born_date =datetime.datetime (2010,3,8)
 day_a= now-your_born_date
 
-print(str(name) +  " your life in days = " + str(day_a.days))
+print(str(name2) +  " your life in days = " + str(day_a.days))
 from dateutil.relativedelta import relativedelta
 difference_in_years_a = relativedelta(now, your_born_date).years
 print("your life in years = " + str(difference_in_years_a))
@@ -33,14 +34,23 @@ print("your life in week = " + str(difference_in_week_a))
 
 print("----------------------------------------------")
 # DIFFERENCE PERSON
+if (difference_in_years_b > difference_in_years_a):
+  olderPerson = name1
+  youngerPerson = name2
+else :
+  olderPerson = name2
+  youngerPerson = name1
+
+print(youngerPerson + " is younger than " + olderPerson)
+
 bigger= abs(day_b-day_a)
-print("your life bigger in days = " + str(bigger.days))
+print("in days = " + str(bigger.days))
 
 bigger = abs(difference_in_years_b-difference_in_years_a)
-print("your life bigger in year = " + str(bigger))
+print("in years = " + str(bigger))
 
 bigger = abs(difference_in_month_b-difference_in_month_a)
-print("your life bigger in month = " + str(bigger))
+print("in months = " + str(bigger))
 
 bigger = abs(difference_in_week_b-difference_in_week_a)
-print("your life bigger in week = " + str(bigger))
+print("in weeks = " + str(bigger))
