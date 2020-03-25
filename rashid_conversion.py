@@ -13,7 +13,7 @@ converted = False
 
 #km
 if (fr == "km" and to =="km"):
-    print(number1 + " km")
+    print(str(number1) + " km")
     converted = True
     
 if (fr == "km" and to =="m"):
@@ -25,55 +25,55 @@ if (fr == "km" and to =="sm"):
     converted = True
     
 if (fr == "km" and to =="mm"):
-    print(str(number1*1000000 + " mm")
+    print(str(number1*1000000) + " mm")
     converted = True
      
 if (fr == "km" and to =="micrometre"):
-    print(number1*1000000000 + " micrometre")
+    print(str(number1*1000000000) + " micrometre")
     converted = True
  
 #m
 if(fr == "m" and to =="m"):
-    print(number1 + " m")
+    print(str(number1) + " m")
     converted = True
     
 if (fr == "m" and to =="sm"):
-    print(number1*100 + " sm")
+    print(str(number1*100) + " sm")
     converted = True
     
 if (fr == "m" and to =="mm"):
-    print(number1*1000 + " mm")
+    print(str(number1*1000) + " mm")
     converted = True 
     
 if (fr == "m" and to =="micrometre"):
-    print(number1*1000000 + " micrometre")
+    print(str(number1*1000000) + " micrometre")
     converted = True 
     
 #sm
 if (fr == "sm" and to =="sm"):
-    print(number1 + " sm")
+    print(str(number1) + " sm")
     converted = True 
 
 if (fr == "sm" and to =="mm"):
-    print(number1*10 + " mm")
+    print(str(number1*10) + " mm")
     converted = True 
 
 if (fr == "sm" and to =="micrometre"):
-    print(number1*10000 + " micrometre")
+    print(str(number1*10000) + " micrometre")
     converted = True
     
 #mm
 if (fr == "mm" and to =="mm"):
-    print(number1 + " mm")
+    print(str(number1) + " mm")
     converted = True
 
 if (fr == "mm" and to =="micrometre"):
-    print(number1*1000 + " micrometre")
+    print(str(number1*1000) + " micrometre")
     converted = True
     
 #micrometre
 if (fr == "micrometre" and to =="micrometre"):
-    print(number1 + " micrometre")
+    print(str(number1) + " micrometre")
     converted = True
 
 if (converted == False):
