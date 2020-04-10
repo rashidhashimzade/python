@@ -1,9 +1,14 @@
 import datetime
 from datetime import date
-name1 = "Ramin"
+
+##############
 # FIRST PERSON
-your_born_date = datetime.datetime(2007,1,1)
-now = datetime.datetime.today()
+name1 = input("what is first person's name?")
+bdate = input("what is first person's birth date?")
+
+your_born_date = datetime.datetime.strptime(bdate, "%d.%m.%Y").date()
+
+now = datetime.datetime.today().date()
 day_b = now-your_born_date
 print(str(name1) + " your life in days = " + str(day_b.days))
 from dateutil.relativedelta import relativedelta
@@ -15,11 +20,15 @@ print("your life in month = " + str(difference_in_month_b))
 difference_in_week_b = day_b.days/7
 print("your life in week = " + str(difference_in_week_b))
 
+
+##############
 # SECOND PERSON
 print("----------------------------------------------")
-name2 = "Rashid"
+name2 = input("what is second person's name?")
+bdate = input("what is second person's birth date?")
 
-your_born_date =datetime.datetime (2010,3,8)
+your_born_date = datetime.datetime.strptime(bdate, "%d.%m.%Y").date()
+
 day_a= now-your_born_date
 
 print(str(name2) +  " your life in days = " + str(day_a.days))
@@ -43,7 +52,7 @@ else :
 
 print(youngerPerson + " is younger than " + olderPerson)
 
-bigger= abs(day_b-day_a)
+bigger = abs(day_b-day_a)
 print("in days = " + str(bigger.days))
 
 bigger = abs(difference_in_years_b-difference_in_years_a)
