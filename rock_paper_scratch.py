@@ -23,7 +23,7 @@ for abc in range(3) :
         else :
             print("ERROR!")
             
-    print("Computer : " + str(computer1))
+    print("Computer : " + computer1)
     
     
     if(computer1 == select):
